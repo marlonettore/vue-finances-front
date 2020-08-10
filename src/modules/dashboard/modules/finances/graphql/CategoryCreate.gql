@@ -1,0 +1,14 @@
+# import * from './Operation.gql'
+# import './CategoryFragment.gql'
+
+mutation CategoryCreate(
+  $description: String!
+  $operation: Operation!
+){
+  createCategory(
+    description: $description,
+    operation: $operation
+  ){
+    ...CategoryFragment
+  }
+}
